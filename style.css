@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css?family=League+Spartan:wght@400,700,900&display=swap");
+
+:root {
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsla(300, 39%, 75%, 25%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+body {
+  padding: 50px 20px;
+  background-image: url(./images/bg-pattern-top-mobile.svg);
+}
+
+main {
+  display: grid;
+}
+
+.title {
+  text-align: center;
+  font-size: 45px;
+  color: var(--Very-Dark-Magenta);
+  margin-bottom: 20px;
+}
+
+.sub {
+  text-align: center;
+  font-size: 17px;
+  line-height: 20px;
+  color: var(--Dark-Grayish-Magenta);
+}
+
+.rating {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 50px 0;
+}
+
+.rate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  background-color: var(--Light-Grayish-Magenta);
+  padding: 10px 0;
+  gap: 5px;
+  color: var(--Very-Dark-Magenta);
+  font-weight: 700;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+  border-radius: 10px;
+  background-color: var(--Very-Dark-Magenta);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header .img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.img > img {
+  width: 100%;
+}
+
+.profile .name {
+  color: var(--White);
+  margin-bottom: 5px;
+}
+
+.profile .stat {
+  color: var(--Soft-Pink);
+}
+
+.card .testimony {
+  color: var(--White);
+  line-height: 30px;
+}
+
+@media (min-width: 900px) {
+  body {
+    background-image: url(./images/bg-pattern-top-desktop.svg);
+    padding: 100px;
+  }
+
+  main {
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .top {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .rating {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rate {
+    width: 400px;
+    padding: 15px 0;
+    padding-left: 30px;
+    flex-direction: row;
+  }
+
+  .rate1 {
+    margin-left: -60px;
+  }
+
+  .rate3 {
+    margin-right: -70px;
+  }
+
+  .cards {
+    flex-direction: row;
+    margin-top: 70px;
+  }
+
+  .card:nth-child(1) {
+    margin-top: -70px;
+  }
+
+  .card:nth-child(3) {
+    margin-top: 70px;
+  }
+}
